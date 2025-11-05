@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>SABE 2026 Annual Conference – UM-Dearborn</title>
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand-cluster" aria-label="Site and host institution">
+        <!-- SABE logo (links to Home) -->
+        <a class="sabe-logo" href="index.html" aria-label="Go to Home">
+          <img
+            class="brand-logo"
+            src="sabe-logo-white-web.png"
+            alt="SABE — Society for the Advancement of Behavioral Economics"
+            width="768" height="768" decoding="async"/>
+        </a>
+
+        <!-- UM-Dearborn seal (clickable) -->
+        <a class="um-seal" href="https://umdearborn.edu" target="_blank" rel="noopener" aria-label="UM-Dearborn website">
+          <img
+            class="brand-seal"
+            src="um-dearborn_seal-282_7406-500x (1).png"
+            alt="University of Michigan–Dearborn seal"
+            width="500" height="500" decoding="async"/>
+        </a>
+      </div>
+
+      <!-- Primary nav -->
+      <nav class="topnav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dates.html">Important Dates</a></li>
+          <li><a href="submissions.html">Submissions</a></li>
+          <li><a href="program.html">Program</a></li>
+          <li><a href="attend.html">Attend</a></li>
+          <li><a href="committee.html">Committee</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero hero--photo">
+    <div class="hero-inner">
+      <div class="hero-title">
+        <div class="hero-kicker">SABE 2026 Annual Conference</div>
+        <div class="hero-deck">
+          Society for the Advancement of Behavioral Economics<br/>
+          University of Michigan–Dearborn · Dearborn, USA
+        </div>
+        <div class="hero-meta">Dates: <strong>June 23–25, 2026</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- Welcome -->
+    <section class="card">
+      <h2 class="subhead">Welcome</h2>
+      <p class="muted">
+        The University of Michigan - Dearborn and
+        <a href="https://sabeconomics.org/" target="_blank" rel="noopener">
+          the Society for the Advancement of Behavioral Economics (SABE)
+        </a>
+        welcome scholars and practitioners working in the areas of behavioral economics and related
+        disciplines such as psychology, sociology, anthropology, neuroscience, public policy, decision
+        science, business, etc. for three days of talks, networking, and community in the Dearborn,
+        Michigan area.
+      </p>
+    </section>
+
+    <!-- Hosted by -->
+    <section class="card">
+      <h2 class="subhead">Hosted by</h2>
+      <div class="gallery">
+        <!-- UM-Dearborn image is clickable -->
+        <figure class="gallery-item">
+          <a href="https://umdearborn.edu" target="_blank" rel="noopener" aria-label="University of Michigan–Dearborn">
+            <img src="IMG_7004.jpeg" alt="University of Michigan–Dearborn, block M sign" loading="eager"/>
+          </a>
+          <figcaption>
+            <a href="https://umdearborn.edu" target="_blank" rel="noopener">University of Michigan–Dearborn</a>
+          </figcaption>
+        </figure>
+
+        <!-- CASL image is clickable -->
+        <figure class="gallery-item">
+          <a href="https://umdearborn.edu/casl" target="_blank" rel="noopener" aria-label="College of Arts, Sciences, and Letters">
+            <img src="hq720.jpg" alt="College of Arts, Sciences, and Letters building" loading="lazy"/>
+          </a>
+          <figcaption>
+            <a href="https://umdearborn.edu/casl" target="_blank" rel="noopener">College of Arts, Sciences, and Letters</a>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © <span id="year"></span> Society for the Advancement of Behavioral Economics
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

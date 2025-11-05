@@ -1,0 +1,163 @@
+/* Tokens */
+:root{
+  --navy:#0d2a4a;
+  --blue:#0f4c81;
+  --ink:#22303c;
+  --muted:#6b7a8a;
+  --card:#ffffff;
+  --bg:#eef2f5;
+  --shadow: 0 6px 16px rgba(13,42,74,.08);
+  --radius: 12px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family:"Source Sans 3", system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color:var(--ink);
+  background:linear-gradient(#0c314e 0, #0c314e 220px, var(--bg) 220px, var(--bg) 100%);
+}
+
+/* Header / Topbar */
+.topbar{position:relative; z-index:5;}
+.topbar-inner{
+  max-width:1180px; margin:0 auto; padding:16px 20px; display:flex; align-items:center; gap:16px;
+}
+
+/* SABE brand image as logo */
+.sabe-logo{display:inline-flex; align-items:center; text-decoration:none}
+.brand-logo{
+  height:46px; width:auto; display:block;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.25));
+  transition: transform .15s ease;
+}
+.sabe-logo:hover .brand-logo{ transform: translateY(-1px); }
+
+
+
+/* Top-right nav */
+.topnav{margin-left:auto;}
+.topnav ul{list-style:none; margin:0; padding:0; display:flex; gap:22px; align-items:center; flex-wrap:wrap;}
+.topnav a{
+  color:#fff; text-decoration:none; font-weight:700; letter-spacing:.2px; padding:8px 0; position:relative;
+}
+.topnav a::after{
+  content:""; position:absolute; left:0; right:0; bottom:-4px; height:2px;
+  background:transparent; transform:scaleX(0); transition:transform .2s ease, background .2s ease;
+}
+.topnav a:hover::after{ background:#c8a951; transform:scaleX(1); }
+
+/* Hero variants */
+.hero{position:relative}
+.hero--photo{
+  background:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url('21660_N90.jpg') center/cover no-repeat;
+}
+.hero--slim{background: linear-gradient(#0c314e 0, #0c314e 1px);}
+.hero-inner{max-width:1180px; margin:0 auto; padding:56px 20px 84px;}
+.hero--slim .hero-inner{padding: 28px 20px 34px;}
+.hero-title{
+  display:inline-block; background:rgba(0,0,0,.55); color:#fff;
+  padding:20px 24px; border-radius:10px; box-shadow:0 8px 18px rgba(0,0,0,.25);
+}
+.hero--slim .hero-title{background:transparent; box-shadow:none; padding:0;}
+.hero-kicker{font:700 26px Merriweather, serif; margin:0 0 4px}
+.hero-deck{font:italic 20px Merriweather, serif; opacity:.95}
+.hero-meta{margin-top:6px; font-weight:700}
+
+/* Containers / Cards */
+.container{max-width:1180px; margin:24px auto 40px; padding:0 20px}
+.page{max-width:1180px; margin:16px auto 40px; padding:0 20px}
+.card{
+  background:var(--card); border:1px solid #e1e8ef; border-radius:var(--radius);
+  box-shadow:var(--shadow); padding:16px 18px; margin-bottom:18px;
+}
+.subhead{margin:6px 0 10px; font:800 18px Merriweather, serif; color:#23364a}
+.muted{color:var(--muted)}
+
+/* Gallery (Home) */
+.gallery{
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:16px;
+}
+.gallery-item{
+  border:1px solid #e1e8ef; border-radius:14px; background:#fff; overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.gallery-item img{ width:100%; height:280px; object-fit:cover; display:block; }
+.gallery-item figcaption{ padding:10px 12px; font-weight:700; color:#1d3b63; background:#f7fbff; }
+
+/* People grid (Committee) */
+.people-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap:18px; margin-top:6px;
+}
+.person{
+  border:1px solid #e1e8ef; border-radius:14px; background:#fff;
+  padding:16px; text-align:center; box-shadow: var(--shadow);
+}
+.avatar{
+  width:140px; height:140px; margin:0 auto 10px; border-radius:999px;
+  overflow:hidden; border:4px solid #f3f7fb; box-shadow: 0 4px 16px rgba(0,0,0,.08);
+}
+.avatar img{ width:100%; height:100%; object-fit:cover; display:block; }
+.person-name{ font:800 18px Merriweather, serif; color:#23364a; margin:8px 0 4px; }
+.person-role{ margin:0; color:#6b7a8a; font-weight:600; }
+
+/* Ghost buttons */
+.ghost{
+  display:inline-block; text-decoration:none; border:1px solid #d1dbe6; padding:8px 10px; border-radius:8px; font-weight:700; color:#1d3b63; background:#fff;
+}
+.ghost:hover{background:#f5f9ff}
+
+/* Contact form */
+.contact-form{max-width:560px}
+.form-row{display:flex; flex-direction:column; gap:6px; margin-bottom:12px}
+.form-row input, .form-row textarea{
+  border:1px solid #d5dfeb; border-radius:10px; padding:10px 12px; font:inherit; background:#fff;
+}
+.cta{
+  display:inline-block; background:#0f4c81; color:#fff; text-decoration:none; padding:10px 14px; border-radius:10px; font-weight:800;
+}
+
+/* Footer */
+.site-footer{max-width:1180px; margin:20px auto 40px; padding:0 20px; color:#6b7a8a}
+
+/* Responsive */
+@media (max-width: 900px){
+  .topnav ul{gap:14px;}
+  .gallery-item img{height:220px;}
+}
+.brand-logo { height:54px; } /* optional */
+
+
+/* === Brand pair (SABE + UM-Dearborn seal) === */
+.brand-cluster{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+/* Make both logos the same visual height */
+.brand-logo{
+  height:54px;
+  width:auto;
+  display:block;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.25));
+  transition: transform .15s ease;
+}
+
+.brand-seal{
+  height:54px;
+  width:auto;
+  display:block;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.25));
+  transition: transform .15s ease;
+}
+
+.um-seal:hover .brand-seal{ transform: translateY(-1px); }
+
+@media (max-width:520px){
+  .brand-logo{height:42px;}
+  .brand-seal{height:42px;}
+}
